@@ -1,0 +1,40 @@
+# List of files to be ignored by git (i.e. not to commit)
+
+# Editor backups files
+*~
+
+# Python
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Mypy cache
+.mypy_cache/
+
+# Log files
+logs/
+
+# C extensions
+*.so
+
+# PyCharm project settings
+.idea/
+
+# Spyder project settings
+.spyderproject
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Reports on unit test, type hint coverage, etc
+reports/
+git-hooks/config/.isort.cfg
+.coverage
+.cache
+
+# Dask
+dask-worker-space/
+
+# Prefect
+*-deployment.yaml

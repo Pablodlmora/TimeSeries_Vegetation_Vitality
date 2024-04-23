@@ -1,0 +1,37 @@
+## If you would like to extend the `pyproject.toml` file but override some rules, follow this example here:
+#extend = "./pyproject.toml"
+## But use a different line length.
+#line-length = 100
+
+# Enable flake8 (F), isort (I), pydocstyle (D) and pylint (PL) checks
+select = ["F", "I", "D", "PL"]
+
+# Never enforce `PLR2004` (magic-value-comparison) Ref: https://pylint.pycqa.org/en/latest/user_guide/checkers/extensions.html#magic-value-checker
+# Never enforce `D104` (missing docstring in public package)
+# Never enforce `D106` (missing docstring in public nested class)
+ignore = ["PLR2004", "D104", "D106"]
+
+# Set the cache directory for ruff
+cache-dir = "./.cache/ruff"
+
+# Allow autofix for all enabled rules
+fix = true
+
+# Enforce the following line length settings:
+line-length = 119
+
+# Enforce the following isort settings:
+isort.combine-as-imports = true
+isort.forced-separate = ["liveeo", "tests"]
+
+# Enforce the following pydocstyle settings:
+pydocstyle.convention = "numpy"
+pydocstyle.ignore-decorators = ["property"]
+
+# Enforce the following pylint settings:
+pylint.max-statements = 100
+pylint.max-args = 10
+
+# ignore docstring checks in tests
+[per-file-ignores]
+"tests/**/*.py" = ["D"]

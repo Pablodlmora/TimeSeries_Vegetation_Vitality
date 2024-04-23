@@ -1,0 +1,7 @@
+variables:
+  PREFECT_PIPELINE_REF: &PREFECT_PIPELINE_REF "v2-latest"
+
+include:
+  - project: 'liveeo/dataops/prefect-pipeline'
+    ref: *PREFECT_PIPELINE_REF
+    file: '.gitlab-ci.yml'
